@@ -2,7 +2,7 @@
 <manifest>
     <format>
         <recoveries>
-            <recovery name="twrp" version="3.5.x" >
+            <recovery name="default" version="3.5.x" >
                 <file_system_types>ext4</file_system_types>
                 
                 <partition name="boot" />
