@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <format>
+        <recoveries>
+            <recovery name="twrp" version="3.5.x" >
+                <file_system_types>ext4</file_system_types>
+                
+                <partition name="boot" />
+                <partition name="recovery" />
+                <partition name="system" />
+                <partition name="vendor" />
+                <partition name="userdata" />
+                <!-- Add more partitions based on your TCL phone's specifics -->
+                
+                <mounts>
+                    <mount name="/system" path="/system" />
+                    <mount name="/vendor" path="/vendor" />
+                    <mount name="/data" path="/data" />
+                    <!-- Add other mounts as needed -->
+                </mounts>
+                
+                <backup_partitions>
+                    <backup_partition name="boot" />
+                    <backup_partition name="recovery" />
+                    <backup_partition name="system" />
+                    <backup_partition name="vendor" />
+                    <backup_partition name="userdata" />
+                    <!-- Add more partitions to backup as needed -->
+                </backup_partitions>
+                
+                <reboot_actions>
+                    <reboot_action name="system" />
+                    <!-- Add other reboot actions as needed -->
+                </reboot_actions>
+            </recovery>
+        </recoveries>
+    </format>
+</manifest>
